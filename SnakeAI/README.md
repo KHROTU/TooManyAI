@@ -1,0 +1,57 @@
+# SnakeAI: Exploring AI Implementations in the Classic Snake Game
+
+## Project Overview
+
+This project explores various artificial intelligence (AI) implementations in the classic Snake game. It showcases different AI algorithms and approaches using C++ and Python. The goal is to provide a platform for experimenting with and comparing different AI techniques in a simple, yet engaging environment.
+
+## Implementations
+
+### CppSnakeAI
+
+- **Description:** This implementation is written in C++.
+- **Status:** Incomplete. Further development is not currently planned.
+- **Note:** This implementation serves as a starting point and may not be fully functional.
+
+### PySnakeAI
+
+- **Description:** This implementation uses a simple A* algorithm for pathfinding. While not a true AI in the traditional sense, it provides a functional solution for the Snake game.
+- **Status:** Complete.
+- **Dependencies:** Python
+- **Instructions:**
+  1. Ensure you have Python installed.
+  2. Navigate to the `PySnakeAI/` directory in your terminal.
+  3. Run `python Snake.py`.
+- **Details:** This implementation provides a basic AI for the Snake game, demonstrating pathfinding principles.
+
+### PySnakeAI+
+
+- **Description:** This implementation utilizes Deep Q-Networks (DQN) with PyTorch, representing the most advanced AI implementation in the project.
+- **Status:** Under Development.
+- **Dependencies:** Python, PyTorch (recommended installation via Anaconda in a virtual environment)
+- **Instructions:**
+  1. Ensure you have Python and PyTorch installed. If you are not familiar with PyTorch, it is recommended to use Anaconda and install PyTorch in a virtual environment.
+  2. Navigate to the `PySnakeAI+/` directory in your terminal.
+  3. Run `python SnakePlus.py`.
+- **Details:** This implementation explores the use of deep reinforcement learning to train an AI to play the Snake game.
+
+## Future Work
+
+- Further development and refinement of the DQN implementation in `PySnakeAI+`, including hyperparameter tuning and exploration of different network architectures.
+- Potential exploration of other AI algorithms and techniques for the Snake game, such as genetic algorithms or Monte Carlo tree search.
+- Creation of a comprehensive evaluation framework to compare the performance of different AI implementations.
+- Adding unit tests to ensure code quality and prevent regressions.
+
+## Contributing
+
+We welcome contributions to this project! If you are interested in contributing, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Implement your changes.
+4. Submit a pull request.
+
+Please ensure that your code adheres to the project's coding standards and includes appropriate unit tests.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
