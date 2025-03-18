@@ -17,9 +17,13 @@
             ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [],
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${workspaceFolder};${env:PATH}"
+                }
+            ],
             "externalConsole": true,
-            "environment": [{"name": "PATH", "value": "${workspaceFolder};${env:PATH}"}],
             "MIMode": "gdb",
             "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
             "setupCommands": [
