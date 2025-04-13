@@ -16,25 +16,28 @@ YELLOW = 'Y'
 GRAY = 'X'
 
 def load_words(filename):
-    if not os.path.exists(filename):
-        print(f"Error: Word list file '{filename}' not found in the current directory.")
+    script_dir = os.path.dirname(__file__)
+    filepath = os.path.join(script_dir, filename)
+
+    if not os.path.exists(filepath):
+        print(f"Error: Word list file '{filepath}' not found.")
         sys.exit(1)
     words = set()
     try:
-        with open(filename, 'r') as f:
+        with open(filepath, 'r') as f:
             for line in f:
                 word = line.strip().upper()
                 if len(word) == WORD_LENGTH and word.isalpha():
                     words.add(word)
     except Exception as e:
-        print(f"Error reading word list file '{filename}': {e}")
+        print(f"Error reading word list file '{filepath}': {e}")
         sys.exit(1)
 
     if not words:
-        print(f"Error: No valid {WORD_LENGTH}-letter words found in '{filename}'.")
+        print(f"Error: No valid {WORD_LENGTH}-letter words found in '{filepath}'.")
         sys.exit(1)
 
-    print(f"Loaded {len(words)} valid words.")
+    print(f"Loaded {len(words)} valid words from '{filepath}'.")
     return list(words)
 
 @lru_cache(maxsize=None)
